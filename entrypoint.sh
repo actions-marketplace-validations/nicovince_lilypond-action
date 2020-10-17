@@ -1,7 +1,9 @@
 #!/bin/bash
 ARGS="$@"
 OUTPUT=""
+echo "Lilypond list: ${ARGS}"
 for f in ${ARGS}; do
+    echo "Processing ${f}"
     if [ ! -f ${f} ]; then
         echo "Error: ${f} does not exists"
         exit 1
