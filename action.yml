@@ -13,6 +13,6 @@ outputs:
 
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'ghcr.io/nicovince/lilypond-action:v2'
   args:
     - ${{ inputs.ly_files }}
