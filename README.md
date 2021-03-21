@@ -4,7 +4,7 @@ Github action to compile lilypond files
 ```
 - name: Compilation step
   id: compilation
-  uses: nicovince/lilypond-action@v1.0
+  uses: nicovince/lilypond-action@v2.0
   with:
     ly_files: /path/file.ly /path/file2.ly
 ```
