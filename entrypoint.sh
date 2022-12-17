@@ -17,4 +17,4 @@ for f in ${ARGS}; do
     OUTPUT="${OUTPUT}${f%%ly}pdf "
 done
 
-echo "::set-output name=pdfs::${OUTPUT}"
+echo "pdfs=${OUTPUT}" >> ${GITHUB_OUTPUT}
