@@ -15,7 +15,7 @@ jobs:
         name: Get the version
         id: get_version
         run: |
-          echo ::set-output name=GHCR_TAG::ghcr.io/${GITHUB_REPOSITORY}:${GITHUB_REF/refs\/tags\//}
+          echo "GHCR_TAG=ghcr.io/${GITHUB_REPOSITORY}:${GITHUB_REF/refs\/tags\//}" >> ${GITHUB_OUTPUT}
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
