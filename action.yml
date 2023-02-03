@@ -4,7 +4,22 @@ description: 'Compile Lilypond scores using docker'
 inputs:
   ly_files:
     description: 'Lilypond files to compile'
-    required: true
+    required: false
+    default: ''
+
+  build_mode:
+    description: 'Specify how to compile the lilypond files, "simple" to provide lilyond files or "make" to use a makefile'
+    required: false
+    default: 'simple'
+
+  make_dir:
+    description: 'Directory where makefile is located'
+    required: false
+    default: ''
+
+  make_target:
+    description: 'Makefile target to execute'
+    required: false
     default: ''
 
 outputs:
@@ -13,6 +28,6 @@ outputs:
 
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/nicovince/lilypond-action:v2.1'
+  image: 'docker://ghcr.io/nicovince/lilypond-action:v2.2'
   args:
     - ${{ inputs.ly_files }}
