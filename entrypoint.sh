@@ -34,8 +34,8 @@ function make_mode()
     echo "pdfs=${PDFS}" >> ${GITHUB_OUTPUT}
 }
 
-if [ ${INPUT_BUILD_MODE} = "simple" ]; then
+if [ "${INPUT_BUILD_MODE}" = "simple" ]; then
     simple_mode
-elif [ ${INPUT_BUILD_MODE} = "make" ]; then
+elif [ "${INPUT_BUILD_MODE}" = "make" ]; then
     make_mode
 fi
