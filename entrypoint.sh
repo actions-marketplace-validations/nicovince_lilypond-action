@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x
 ARGS="$@"
 OUTPUT=""
 
@@ -31,7 +30,7 @@ function make_mode()
         echo "Make based build failed"
         exit 1
     fi
-    PDFS="$(find . -name "*.pdf")"
+    PDFS="$(find . -name "*.pdf" | tr '\n' ' ')"
     echo "pdfs=${PDFS}" >> ${GITHUB_OUTPUT}
 }
 
