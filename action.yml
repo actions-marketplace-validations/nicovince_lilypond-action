@@ -31,3 +31,7 @@ runs:
   image: 'docker://ghcr.io/nicovince/lilypond-action:v2.2'
   args:
     - ${{ inputs.ly_files }}
+
+branding:
+  icon: 'music'
+  color: 'yellow'
